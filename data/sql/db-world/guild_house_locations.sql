@@ -1,0 +1,55 @@
+DROP TABLE IF EXISTS `guild_house_locations`;
+
+CREATE TABLE IF NOT EXISTS `guild_house_locations` (
+    `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    `name` VARCHAR(255) NOT NULL,
+    `map` INT UNSIGNED NOT NULL DEFAULT 0,
+    `positionX` FLOAT NOT NULL DEFAULT 0,
+    `positionY` FLOAT NOT NULL DEFAULT 0,
+    `positionZ` FLOAT NOT NULL DEFAULT 0,
+    `orientation` FLOAT NOT NULL DEFAULT 0,
+    `radius` FLOAT NOT NULL DEFAULT 100.0,
+    `enabled` TINYINT UNSIGNED NOT NULL DEFAULT 1,
+    PRIMARY KEY (`id`),
+    KEY `idx_enabled` (`enabled`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+INSERT INTO `guild_house_locations`
+    (`id`, `name`, `map`, `positionX`, `positionY`, `positionZ`, `orientation`)
+VALUES
+(1,  'GM Island', 1, 16222.972, 16267.802, 13.136777, 1.461173),
+(2,  'Tauren village at Veiled Sea', 1, -10711, 2483, 8, 0),
+(3,  'Fishing outside Northshire Abbey', 0, -8323, -343, 146, 0),
+(4,  'Troll Village in Darkshore', 1, 7368, -1560, 163, 0),
+(5,  'Dwarven village outside Ironforge', 0, -4151, -1400, 198, 0),
+(6,  'Dwarven village - Arathi Highlands', 0, -1840, -4233, 2.14, 0),
+(8,  'Tauren camp - Red Rock', 1, -723, -1076, 179, 0),
+(9,  'Shadowfang Keep exterior', 0, -206, 1666, 80, 0),
+(10, 'Harbor house outside Stormwind', 0, -6374, 1262, 7, 0),
+(12, 'Old Ironforge', 0, -4844, -1066, 502, 0),
+(13, 'Ironforge Airport', 0, -4863, -1658, 503.5, 0),
+(14, 'Azshara Crater - Alliance', 37, 1088.1, 20.5, 318, 3.6),
+(15, 'Azshara Crater - Horde', 37, -29.13, 971, 347.31, 1.02),
+(16, 'Quel''Thalas Tower', 0, 4303, -2760, 16.8, 0),
+(17, 'Crashed gnome airplane', 0, -6161, -790, 423, 0),
+(18, 'Zul''Gurub exterior', 0, -11790, -1640, 54.7, 0),
+(19, 'Goblin village - South Seas', 1, -11805, -4754, 6, 0),
+(20, 'Villains camp outside Stormwind', 0, -9296, 670, 132, 0),
+(21, 'Stratholme exterior', 0, 3414, -3380, 142.2, 0),
+(22, 'Mount Hyjal - World Tree', 1, 4654, -3772, 944, 0),
+(23, 'Ring of Valor', 1, 2176, -4766, 55, 0),
+(24, 'Stonetalon Logging Camp', 1, 1951.512085, 1530.475586, 247.288147, 0),
+(25, 'Stonetalon Ruins', 1, 2813.660645, 2248.552979, 215.524643, 0),
+(28, 'Teldrassil Furbolg camp', 1, 9725.27, -21.43, 20.03, 0),
+(29, 'Wetlands mountain camp', 0, -3855, -3479, 579, 0),
+(30, 'Ortell''s Hideout', 0, -5362, -2540, 485, 0),
+(31, 'Stranglethorn Secret Cave', 0, -12865, -1396, 115, 0),
+(32, 'Karazhan Smiley', 0, -11073, -1956, 39, 0),
+(33, 'Karazhan Crypt', 0, -11084, -1801, 53, 0),
+(34, 'Undercity Top Tier', 0, 1683.235474, 286.458801, -45.451775, 0),
+(35, 'Stormwind Cut-Throat Alley', 0, -8521.3, 599.5, 101.399338, 0),
+(36, 'Forgotten gnome camp', 0, -5933, 452, 509, 0),
+(37, 'Nagrand - Newton''s Remains', 530, -920.231323, 7096.489258, 170.35289, 0),
+(38, 'Nagrand - Tomb', 530, -2140.501953, 9142.6875, 137.041855, 0),
+(39, 'Nagrand - Challe''s Home', 530, -483.401794, 7461.944824, 186.120987, 0),
+(40, 'Netherstorm - Nova''s Shrine', 530, 2387.753906, 3191.757324, 152.669388, 0);

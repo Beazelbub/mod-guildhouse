@@ -1,5 +1,5 @@
 CREATE TABLE IF NOT EXISTS `guild_house` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `id` int(11) NOT NULL,
   `guild` int(11) NOT NULL DEFAULT '0',
   `phase` int(11) NOT NULL,
   `map` int(11) NOT NULL DEFAULT '0',
@@ -9,4 +9,4 @@ CREATE TABLE IF NOT EXISTS `guild_house` (
   `orientation` float NOT NULL DEFAULT '0',
   PRIMARY KEY (`id`),
   UNIQUE KEY `guild` (`guild`)
-) ENGINE=InnoDB AUTO_INCREMENT=24 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
